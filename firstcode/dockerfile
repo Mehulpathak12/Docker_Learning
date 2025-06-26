@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY src/Main.java /app/Main.java
 
-RUN javac src/Main.java
+RUN javac Main.java
 
 CMD ["java","Main"]
