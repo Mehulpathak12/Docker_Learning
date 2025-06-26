@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    networks:
+      - todo-net
+
+  mongo:
+    image: mongo:7
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - todo-net
+
+volumes:
+  mongo-data:
+
+networks:
+  todo-net:
+    driver: bridge

@@ -1,0 +1,1 @@
+To run this use this commond -> docker-compose up --build
